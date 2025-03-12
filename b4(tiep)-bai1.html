@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tutorial - W3Schools</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.top-menu {
+    background-color: #333;
+    padding: 0px;
+    text-align: center;
+}
+
+.top-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.top-menu li {
+    flex: 1;
+    text-align: center;
+}
+
+.top-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 10px 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.top-menu a:hover {
+    background-color: #222; 
+    border-radius: 0px;
+}
+
+.top-menu a.active {
+    background-color: #04AA6D !important; 
+    color: white;
+    border-radius: 0px;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #ddd; 
+    padding: 15px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    padding: 5px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    border-radius: 0px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #bbb;
+    color: black;
+}
+
+.sidebar a.active {
+    background-color: #04AA6D; 
+    color: white;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.content h1 {
+    font-size: 36px; 
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 32px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.content-box {
+    background-color: #E6F2E6; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 5px;
+}
+
+.content-box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+.btn:hover {
+    background-color: #038a5b;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.btn:hover {
+    background-color: #038a5b;
+}
+
+    </style>
+</head>
+<body>
+
+   
+    <header>
+        <nav class="top-menu">
+            <ul>
+                <li><a href="#" class="active">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JAVASCRIPT</a></li>
+                <li><a href="#">SQL</a></li>
+                <li><a href="#">PYTHON</a></li>
+                <li><a href="#">JAVA</a></li>
+                <li><a href="#">PHP</a></li>
+                <li><a href="#">HOW TO</a></li>
+                <li><a href="#">W3.CSS</a></li>
+                <li><a href="#">C</a></li>
+                <li><a href="#">C++</a></li>
+                <li><a href="#">C#</a></li>
+                <li><a href="#">BOOTSTRAP</a></li>
+                <li><a href="#">REACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+    
+        <aside class="sidebar">
+            <h2>HTML Tutorial</h2>
+            <ul>
+                <li><a href="#" class="active">HTML HOME</a></li>
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">HTML Editors</a></li>
+                <li><a href="#">HTML Basic</a></li>
+                <li><a href="#">HTML Attributes</a></li>
+                <li><a href="#">HTML Paragraphs</a></li>
+                <li><a href="#">HTML Headings</a></li>
+                <li><a href="#">HTML Styles</a></li>
+                <li><a href="#">HTML Elements</a></li>
+                <li><a href="#">HTML Formatting</a></li>
+                <li><a href="#">HTML Quotations</a></li>
+                <li><a href="#">HTML Comments</a></li>
+                <li><a href="#">HTML Colors</a></li>
+                <li><a href="#">HTML CSS</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h1>HTML Tutorial</h1>
+            <div class="button-container">
+                <button class="btn">﹤Home</button>
+                <button class="btn">Next﹥</button>
+            </div>
+            <div class="content-box">
+                <h3>Learn HTML</h3>
+                <p>HTML is the standard markup language for Web pages.</p>
+                <p>With HTML you can create your own Website.</p>
+                <p>HTML is easy to learn - You will enjoy it!</p>
+                <button class="btn">Start learning HTML now »</button>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
