@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cá Nhân Sinh Viên</title>
+    <style>
+     body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fbd7e6;  
+        color: #333; 
+        line-height: 1.6;
+    }
+
+
+    .container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+
+    .avatar-section {
+        text-align: center;
+        margin-bottom: 30px; 
+    }
+
+
+    .avatar {
+       text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .avatar-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #3366FF; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    figcaption {
+        font-size: 24px;
+        color: #0da6f9;  
+        font-family: 'Georgia', serif;  
+        font-weight: bold;
+        margin-top: 15px; 
+     }
+
+    .buttons {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .buttons button {
+        background-color: hsl(197, 97%, 74%); 
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .buttons button:hover {
+        background-color:#fd137c; 
+        transform: scale(1.10); 
+    }
+
+    .intro, .assignments {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        margin-bottom: 40px;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .intro:hover, .assignments:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); 
+    }
+
+    .intro h1, .assignments h1 {
+        color: #fd137c;  
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .info p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        color: #333; 
+    }
+
+    .info strong {
+        color: #fd137c;  
+        font-weight: bold;
+    }
+
+    .info p {
+        color: #757676; 
+    }
+
+    .info h2 {
+        color: #fd137c; 
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .assignments ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .assignments li {
+        margin-bottom: 10px;
+    }
+
+    .assignments a {
+        color: #fd137c; 
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .assignments a:hover {
+        text-decoration: underline;
+    }
+
+    body {
+        background: linear-gradient(135deg, #fbd7e6, #f6d365);
+        background-size: 400% 400%;
+        animation: gradientBackground 10s ease infinite;
+    }
+
+
+    @keyframes gradientBackground {
+        0% {
+            background-position: 100% 50%;
+        }
+        50% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+
+     @media (max-width: 768px) {
+        .container {
+            width: 90%;
+            padding: 10px;
+        }
+
+        .avatar-img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .intro h1, .assignments h1 {
+            font-size: 24px;
+        }
+
+        .buttons button {
+            padding: 8px 18px;
+            font-size: 16px;
+        }
+
+        .info p {
+            font-size: 14px;
+        }
+
+        .assignments a {
+            font-size: 16px;
+        }
+
+        .info h2 {
+            font-size: 18px;
+        }
+     }
+
+        .hidden { display: none; }
+        .assignments-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .menu {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .menu select {
+            font-size: 1.0em;
+            padding: 3px;
+        }
+        .assignments-list {
+            width: 100%;
+        }
+        .assignments-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .assignments-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .assignments-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="avatar-section">
+            <figure class="avatar">
+                <img src="https://24hstore.vn/upload_images/images/Hinh-nen-meo/hinh-nen-meo-bua-meme-4.jpg" alt="Ảnh đại diện" class="avatar-img">
+                <figcaption>Đặng Thị Ngọc Anh</figcaption>
+            </figure>
+        </section>
+
+        <div class="buttons">
+            <button onclick="toggleVisibility('intro')">Giới Thiệu</button>
+            <button onclick="toggleVisibility('assignments')">Bài Tập</button>
+        </div>
+
+        <section id="intro" class="intro hidden">
+            <h1>Giới Thiệu</h1>
+            <div class="info">
+                <p><strong>Họ và tên:</strong> Đặng Thị Ngọc Anh</p>
+                <p><strong>Ngày sinh:</strong> 11/12/2006</p>
+                <p><strong>Quê quán:</strong> Hà Nội</p>
+                <p><strong>Trình độ học vấn:</strong> Sinh viên năm nhất, Đại học Thủ Đô Hà Nội</p>
+                <p><strong>Ngành học:</strong> Toán - Công nghệ thông tin</p>
+                <p><strong>Sở thích:</strong> Cầu lông, ăn uống, chơi game, nghe nhạc và ngủ</p>
+            </div>
+        </section>
+
+        <section id="assignments" class="assignments hidden">
+            <h1>Bài Tập</h1>
+            <div class="assignments-container">
+                <div class="menu">
+                    <label for="sessionSelect">Chọn buổi:</label>
+                    <select id="sessionSelect" onchange="showAssignments(this.value)">
+                        <option value="buoi1">Buổi 1</option>
+                        <option value="buoi2">Buổi 2</option>
+                        <option value="buoi3">Buổi 3</option>
+                        <option value="buoi4">Buổi 4</option>
+                    </select>
+                </div>
+                <div class="assignments-list">
+                    <ul id="buoi1">
+                        <li><a href="bài 1.html">Bài tập 1</a></li>
+                        <li><a href="b2 p1.html">Bài tập 2.1</a></li>
+                        <li><a href="bài 2 p2.html">Bài tập 2.2</a></li>
+                        <li><a href="bài 2 p3.html">Bài tập 2.3</a></li>
+                        <li><a href="b3.html">Bài tập 3</a></li>
+                        <li><a href="b4.html">Bài tập 4</a></li>
+                    </ul>
+                    <ul id="buoi2" class="hidden">
+                        <li><a href="buổi 2-bài 1.html">Bài tập 1</a></li>
+                        <li><a href="buổi 2-bài 2,1.html">Bài tập 2.1</a></li>
+                        <li><a href="buổi 2-bài 2,2.html">Bài tập 2.2</a></li>
+                        <li><a href="buổi 2-bài 2,3.html">Bài tập 2.3</a></li>
+                        <li><a href="buổi 2-bài 3.html">Bài tập 3</a></li>
+                    </ul>
+                    <ul id="buoi3" class="hidden">
+                        <li><a href="b4-bai11.html">Bài tập 1.1</a></li>
+                        <li><a href="b4-bai12.html">Bài tập 1.2</a></li>
+                        <li><a href="b4-bai2.html">Bài tập 2</a></li>
+                        <li><a href="b4-bai31.html">Bài tập 3.1</a></li>
+                        <li><a href="b4-bai32.html">Bài tập 3.2</a></li>
+                        <li><a href="b4-bai33.html">Bài tập 3.3</a></li>
+                    </ul>
+                    <ul id="buoi4" class="hidden">
+                        <li><a href="b4(tiep)-bai1.html">Bài tập 1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleVisibility(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('hidden');
+        }
+
+        function showAssignments(buoi) {
+            const allLists = document.querySelectorAll('.assignments-list ul');
+            allLists.forEach(list => list.classList.add('hidden'));
+            document.getElementById(buoi).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
