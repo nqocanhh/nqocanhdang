@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình bày bảng và ảnh</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: green;
+            color: white;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center; 
+            gap: 3px; 
+        }
+        .image-container img {
+            width: 30px;
+            width: 30%;
+            opacity: 0.5;        }
+        .image-container img:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ví dụ về trình bày bảng</h2>
+    <table>
+        <tr>
+            <th>Tên loại xe</th>
+            <th>Xuất Xứ</th>
+            <th>Giá tiền</th>
+        </tr>
+        <tr>
+            <td>Bugatti La Voatio Noire</td>
+            <td>Pháp</td>
+            <td>18,9 triệu USD</td>
+        </tr>
+        <tr>
+            <td>Lamborghini Veneno</td>
+            <td>Ý</td>
+            <td>4,5 triệu USD</td>
+        </tr>
+        <tr>
+            <td>Ferrari Pininfarina Sergio</td>
+            <td>Ý</td>
+            <td>3,4 triệu USD</td>
+        </tr>
+        <tr>
+            <td>Aston Martin Valkyrie</td>
+            <td>Anh Quốc</td>
+            <td>3,2 triệu USD</td>
+        </tr>
+    </table>
+    <div class="image-container">
+        <img src="https://img.thuthuatphanmem.vn/uploads/2018/10/26/anh-nen-canh-dep-viet-nam-cho-di-dong_055419446.jpg" width="600", height="550">
+        <img src="https://ik.imagekit.io/tvlk/blog/2022/02/dia-diem-du-lich-viet-nam-819x1024.jpg?tr%5Cu003ddpr-2,w-675" width="600", height="550">
+        <img src="https://toigingiuvedep.vn/wp-content/uploads/2021/07/thien-nhien-viet-nam-tuyet-dep.jpg" width="600", height="550">
+    </div>
+</body>
+</html>
